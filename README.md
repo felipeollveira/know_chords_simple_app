@@ -1,24 +1,16 @@
-## Acordes músicais
-#### É Janeiro de 2024, entrei na aventura de aprender a tocar violão e me deparei com o maior adversário do iniciante: CAMPOS HARMONICOS!! 😤😤😤
+# know_chords
 
-[...] ou era o maior adversário
-Esse app auxilia o inciante a aprender sob campos harmonicos de todas notas adjacentes da melhor forma possível; tocando 🤓
+A new Flutter project.
 
-❗❗Funciona assim:
-Voce escolhe a primeira nota
-Anota os acordes da música desejada com o campo harmonico da nota primordial
-Vuala! Tem sua música na notação musical de todos os outros acordes!
-você não adiciona o tempo entre os acordes, isso voce tira de ouvido mesmo
+## Getting Started
 
-🎸 Tocar violão nunca foi tão fácil 🎸
+This project is a starting point for a Flutter application.
 
-## Começando
-Este projeto é um ponto de partida para uma aplicação Flutter.
+A few resources to get you started if this is your first Flutter project:
 
-Alguns recursos para você vir se este para seu primeiro projeto Flutter:
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-Lab: Escreva seu primeiro aplicativo Flutter
-Livro de receitas: amostras úteis de Flutter
-Para obter ajuda para vir com o desenvolvimento do Flutter, consulte o documentação on-line, que oferece tutoriais, amostras, orientações sobre desenvolvimento móvel e uma referência completa de API.
-
-    App configurado para android, ios e windows
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
