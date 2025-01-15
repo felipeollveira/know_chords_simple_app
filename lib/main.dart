@@ -14,11 +14,12 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         brightness: Brightness.light,
-        primaryColor: const Color(0xFF3B3936),
-        scaffoldBackgroundColor: const Color(0xFF232323),
+        primaryColor: const Color(0xFF154666),
+        scaffoldBackgroundColor: const Color(0xFFF5FBFF),
         fontFamily: 'Roboto',
       ),
       home: const navApp(),
     );
   }
 }
+

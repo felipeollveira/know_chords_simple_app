@@ -30,30 +30,30 @@ class _MeuBodyState extends State<MeuBody> {
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
-                color: Color(0xFF3B3936),
+                color: Color(0xFF154666),
               ),
             ),
           ),
           const SizedBox(height: 0),
           SizedBox(
-            height: 62,
-            child: ListView.builder(
+            height: 60,
+            child: ListView.separated(
               scrollDirection: Axis.horizontal,
               itemCount: tons.length,
-              //separatorBuilder: (context, index) => const SizedBox(width: 8),
+              separatorBuilder: (context, index) => const SizedBox(width: 8),
               itemBuilder: (context, index) {
                 final tom = tons[index];
                 final isSelected = tomSelecionado == tom;
 
                 return Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 0), // espaco da margem
+                  padding: const EdgeInsets.symmetric(horizontal: 2, vertical: 0), // espaco da margem
                   child: ChoiceChip(
                     label: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 10),
+                      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
                       child: Text(tom),
                     ),
                     selected: isSelected,
-                    selectedColor: const Color(0xFF3B3936),
+                    selectedColor: const Color(0xFF154666),
                     onSelected: (selected) {
                       setState(() {
                         tomSelecionado = selected ? tom : null;
@@ -64,8 +64,7 @@ class _MeuBodyState extends State<MeuBody> {
 
                       });
                     },
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(2)),
-                    backgroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                     side: BorderSide(color: isSelected ? Colors.transparent : Colors.grey.shade200),
                     labelStyle: TextStyle(
                       color: isSelected ? Colors.white : Colors.black,
@@ -77,7 +76,7 @@ class _MeuBodyState extends State<MeuBody> {
             ),
           ),
           if (tomSelecionado != null) ...[
-            const SizedBox(height: 22),
+            const SizedBox(height: 72),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 2),
               child: Text(
@@ -89,7 +88,7 @@ class _MeuBodyState extends State<MeuBody> {
                 ),
               ),
             ),
-            const SizedBox(height: 0),
+            const SizedBox(height: 8),
 
     Padding(
     padding: const EdgeInsets.symmetric(vertical: 6.0, horizontal: 3), // Padding vertical reduzido
@@ -98,7 +97,7 @@ class _MeuBodyState extends State<MeuBody> {
     runSpacing: 4.0, // Espaçamento vertical entre as linhas do Wrap
     children: List.generate(acordesDoTom.length, (index) {
     final acorde = acordesDoTom[index];
-    //final isSelected = acordesSelecionadosIndices.contains(index);
+    final isSelected = acordesSelecionadosIndices.contains(index);
 
     return ElevatedButton(
     onPressed: () {
@@ -107,8 +106,8 @@ class _MeuBodyState extends State<MeuBody> {
     });
     },
     style: ElevatedButton.styleFrom(
-    backgroundColor:const Color(0xFF3B3936),
-    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 12), // Padding do botão ajustado
+    backgroundColor:const Color(0xFF154666),
+    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 32), // Padding do botão ajustado
     shape: RoundedRectangleBorder(
     borderRadius: BorderRadius.circular(12.0),
     ),
