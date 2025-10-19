@@ -13,34 +13,33 @@ final List<String> tons = [
   'B',
   'Bb'
 ];
-
 List<String> obterAcordesDoTom(String tom) {
   switch (tom) {
     case 'C':
-      return ['C', 'Dm', 'Em', 'F', 'G', 'Am'];
+      return <String>['C', 'Dm', 'Em', 'F', 'G', 'Am'];
     case 'C#':
-      return ['C#', 'D#m', 'Fm', 'F#', 'G#', 'A#m'];
+      return <String>['C#', 'D#m', 'Fm', 'F#', 'G#', 'A#m'];
     case 'D':
-      return ['D', 'Em', 'F#m', 'G', 'A', 'Bm'];
+      return <String>['D', 'Em', 'F#m', 'G', 'A', 'Bm'];
     case 'Eb':
-      return ['Eb', 'Fm', 'Gm', 'Ab', 'Bb', 'Cm'];
+      return <String>['Eb', 'Fm', 'Gm', 'Ab', 'Bb', 'Cm'];
     case 'E':
-      return ['E', 'F#m', 'G#m', 'A', 'B', 'C#m'];
+      return <String>['E', 'F#m', 'G#m', 'A', 'B', 'C#m'];
     case 'F':
-      return ['F', 'Gm', 'Am', 'Bb', 'C', 'Dm'];
+      return <String>['F', 'Gm', 'Am', 'Bb', 'C', 'Dm'];
     case 'F#':
-      return ['F#', 'G#m', 'A#m', 'B', 'C#', 'D#m'];
+      return <String>['F#', 'G#m', 'A#m', 'B', 'C#', 'D#m'];
     case 'G':
-      return ['G', 'Am', 'Bm', 'C', 'D', 'Em'];
+      return <String>['G', 'Am', 'Bm', 'C', 'D', 'Em'];
     case 'Ab':
-      return ['Ab', 'Bbm', 'Cm', 'Db', 'Eb', 'Fm'];
+      return <String>['Ab', 'Bbm', 'Cm', 'Db', 'Eb', 'Fm'];
     case 'A':
-      return ['A', 'Bm', 'C#m', 'D', 'E', 'F#m'];
+      return <String>['A', 'Bm', 'C#m', 'D', 'E', 'F#m'];
     case 'Bb':
-      return ['Bb', 'Cm', 'Dm', 'Eb', 'F', 'Gm'];
+      return <String>['Bb', 'Cm', 'Dm', 'Eb', 'F', 'Gm'];
     case 'B':
-      return ['B', 'C#m', 'D#m', 'E', 'F#', 'G#m'];
+      return <String>['B', 'C#m', 'D#m', 'E', 'F#', 'G#m'];
     default:
-      return [];
+      return <String>[];
   }
 }

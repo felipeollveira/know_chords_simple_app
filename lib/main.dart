@@ -1,25 +1,57 @@
 import 'package:flutter/material.dart';
-import 'views/partials/appbar.dart';
+import 'screens/home_screen.dart';
+import 'screens/salvos_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const AcordesApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class AcordesApp extends StatefulWidget {
+  const AcordesApp({Key? key}) : super(key: key);
+
+  @override
+  State<AcordesApp> createState() => _AcordesAppState();
+}
+
+class _AcordesAppState extends State<AcordesApp> {
+  int _selectedIndex = 0;
+
+  final List<Widget> _telas = [
+    const HomeScreen(),
+    const SalvosScreen(),
+  ];
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'Know Chords',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        brightness: Brightness.light,
-        primaryColor: const Color(0xFF154666),
-        scaffoldBackgroundColor: const Color(0xFFF5FBFF),
-        fontFamily: 'Roboto',
+        scaffoldBackgroundColor: const Color(0xFFF7FAFC),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF154666)),
+        useMaterial3: true,
       ),
-      home: const navApp(),
+      home: Scaffold(
+        body: _telas[_selectedIndex],
+        bottomNavigationBar: NavigationBar(
+          backgroundColor: Colors.white,
+          indicatorColor: const Color(0xFF154666).withOpacity(0.1),
+          selectedIndex: _selectedIndex,
+          onDestinationSelected: (index) => setState(() => _selectedIndex = index),
+          destinations: const [
+            NavigationDestination(
+              icon: Icon(Icons.cloud_outlined),
+              selectedIcon: Icon(Icons.cloud, color: Color(0xFF154666)),
+              label: 'Home',
+            ),
+            NavigationDestination(
+              icon: Icon(Icons.bookmark_outline),
+              selectedIcon: Icon(Icons.bookmark, color: Color(0xFF154666)),
+              label: 'Salvos',
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
-
